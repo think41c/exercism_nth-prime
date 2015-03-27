@@ -7,11 +7,10 @@ class Prime
     end
     
     until primes.length == x 
-      primes.last
-      primes << 0 # Find a new prime number
+      primes << 2 # Find a new prime number
     end
 
-    2
+    primes.last
   end
 
 end
