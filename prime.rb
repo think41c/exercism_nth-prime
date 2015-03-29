@@ -12,8 +12,7 @@ class Prime
     end
     
     until primes.length == x
-      if self.determine_if_prime(number) 
-      else
+      if self.prime?(number) 
         primes << number
       end
       number += 1 
@@ -22,9 +21,9 @@ class Prime
     primes.last
   end
 
-  def self.determine_if_prime(number)
+  def self.prime?(number)
     upper_range = number/2
-    (2..upper_range).any? { |x| number % x == 0 }
+    (2..upper_range).none? { |x| number % x == 0 }
   end
 end
 
