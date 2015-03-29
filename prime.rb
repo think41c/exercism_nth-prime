@@ -4,7 +4,7 @@
 class Prime
 
   def self.nth(x)
-    number = 3
+    number = 2
     primes = []
 
     if x == 0 
@@ -15,10 +15,9 @@ class Prime
       if self.determine_if_prime(number) 
         puts "#{number} is NOT prime"
       else
-        puts "#{number} it prime"
+        puts "#{number} is prime"
+        primes << number
       end
-
-      primes << 2 # Find a new prime number
       number += 1 
     end
 
@@ -32,4 +31,4 @@ class Prime
   end
 end
 
-p Prime.nth(6)
+p Prime.nth(3)
