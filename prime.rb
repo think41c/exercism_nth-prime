@@ -26,12 +26,9 @@ class Prime
   end
 
   def self.determine_if_prime(number)
+    upper_range = number/2
     p "#{number} - is being checked now"
-    p (2..(number/2)).any? { |x| # number/2, b/c no need to go further than half the number being checked for prime
-      puts "I'm dividing #{number} by #{x}."
-      number % x == 0 }
-    # end
-      
+    p (2..upper_range).any? { |x| number % x == 0 }
   end
 end
 
