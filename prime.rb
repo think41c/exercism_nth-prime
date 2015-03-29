@@ -1,5 +1,3 @@
-# A prime number is divisble by 1 and itself only. 
-# 2, 3, 5, 7, 11, 13, 17, 23, 29, etc
 
 class Prime
 
