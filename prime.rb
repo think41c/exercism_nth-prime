@@ -12,7 +12,12 @@ class Prime
     end
     
     until primes.length == x
-      self.determine_if_prime(number)
+      if self.determine_if_prime(number) 
+        puts "its prime"
+      else
+        puts "its not prime"
+      end
+
       # start_numb % (A range of numbers up to start_numb / 2) == 0  
       primes << 2 # Find a new prime number
       number += 1 
@@ -22,8 +27,8 @@ class Prime
   end
 
   def self.determine_if_prime(number)
-    p (2..40).any? { |x| 40%2==0 }
+    p (2..40).any? { |x| number % x == 0 }
   end
 end
 
-p Prime.nth(2)
+p Prime.nth(6)
